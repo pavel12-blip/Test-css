@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <style>
+            body {
+                background-color: white;
+            }
+            p {
+                color: black;
+            }
+            span {
+                color: purple;
+            }
+
+            .first-block span {
+                font-style: italic;
+            }
+
+            .first-block {
+                background-color: lightblue;
+            }
+
+            .first-block .block-number {
+                background-color: wheat;
+            }
+
+            .row-number {
+                background-color: yellow;
+            }
+
+            .block-number {
+                background-color: lightblue;
+            }
+
+            .first-block > p span {
+                font-weight: bold;
+            }
+
+            .second-block {
+                background-color: pink;
+            }
+
+            .second-block > p:nth-child(odd) .row-number{
+                background-color: gray;
+            }
+
+            .second-block > p:nth-child(even) .row-number{
+                background-color: orange;
+            }
+
+            a:hover {
+                background-color: pink;
+            }
+        </style>
+    </head>
+        <!-- Задание:
+        Вам нельзя менять основной HTML код (все, что ниже этого комментария), можно только добавлять CSS 
+        1. Сделайте фон тела документа белым
+        2. Сделайте фон первого блока голубым, а второго блока - розовым
+        3. Задайте всем <p> элементам черный цвет текста, а всем <span> - фиолетовый
+        4. Выделите курсивом текст всех span'ов в первом блоке.
+        5. Выделите жирным текст span'ов, вложенных в <p>, в свою очередь, являющихся детьми первого блока.
+            Примечение: таким образом, 'вложенный текст1' должен быть жирным, а 'первый' и 'второй' - нет.  
+        6.  1) Цвет фона элементов с классом row-number сделайте желтым, а block-number - голубым.
+            2) Переопределите цвет фона класса block-number являющегося потомком первого блока (на любой понравившийся).
+        Дополнительное задание:
+        7. Во втором блоке, выделите фон чётных элементов класса row-number оранжевым, а нечётных - серым.
+        8. Заставьте ссылку в третьем блоке менять цвет фона на розовый при наведении на неё курсора.
+        -->
+    <body>
+        <h1>Селекторы</h1>
+        
+        <div class='first-block'>
+            <p>Это <span class='block-number'>первый</span> блок</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit veniam maxime consectetur, corrupti atque numquam quisquam quis suscipit illo quam eveniet iste consequuntur repellendus eius sit unde obcaecati ipsum dolor.</p>
+            <p>простой текст <span>вложенный текст1</span></p>
+            <span>простой текст</span>
+            <div>
+                <p>снова простой текст, но вложенный в div и содержащий 2 вложенных span'а: <span>первый</span>, <span>второй</span>.</p>
+            </div>
+        </div>
+        <div class='second-block'>
+            <p><span class='row-number'>Первая</span> строка <span class='block-number'>второго</span> блока</p>
+            <p><span class='row-number'>Вторая</span> строка <span class='block-number'>второго</span> блока</p>
+            <p><span class='row-number'>Третья</span> строка <span class='block-number'>второго</span> блока</p>
+            <p><span class='row-number'>Четвертая</span> строка <span class='block-number'>второго</span> блока</p>
+        </div>
+        <div class='third-block'>
+            <p>Это <span class='block-number'>третий</span> блок</p>
+            <a href="task3.html">Ссылка на третье задание</a>
+        </div>
+                
+    </body>
+</html>

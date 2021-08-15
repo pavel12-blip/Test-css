@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<!--
+    Задание:
+    0. Расположите блок wrapper на 100 пикселей ниже верхней границы документа
+        и на 20 пикселей правее левой границы.
+    1. Оформите блок inner-nav как панель навигации между заданиями. 
+        1) Он не должен уходить за верхнюю границу outer блока при прокрутке.
+        2) Добавьте/измените свойства составляющих элементов, 
+        чтобы она выглядела ровной и не заезжала на другие блоки.
+        При этом оставьте серые границы ссылок. 
+    2. Второй блок (inner2) должен быть обычным в структуре outer блока, 
+    за исключением того, что он должен перекрывать панель навигации при наложении,
+    но не должен перекрывать синий шарик.
+    3. В документе есть 2 шарика: красный и синий.
+        Красный должен быть в левом нижнем углу блока inner1.
+        Синий должен оставаться на месте при прокрутке. 
+        Его левый и правый края должны совпадать с в левой и верхней границами блока wrapper.
+    То есть при прокрутке он не должен сдвигается.
+    4. В третьем (inner3) блоке просто сдвиньте картинку вправо на 100 пикселей от её нормального положения.
+    Примечание: В этом задании редактировать можно только CSS.
+-->
+
+<html>
+    <head>
+        <style>
+            body {
+                padding: 0px;
+                color: black;
+                background-color: lightblue;
+            }
+            .wrapper {
+                background-color: pink;
+                max-height: 400px;
+                max-width: 800px;
+                overflow-y: scroll;
+            }
+
+            .inner0 p {
+                text-align: right;
+            }
+            
+            .inner1 {
+                width: 100%;
+                background-color: orange;
+                height: 200px;
+            }
+
+            .inner2 {
+                min-height: 30px;
+                text-align: right;
+                background-color: lightgreen;
+            }
+
+            .inner3 {
+                background-color: lightyellow;
+            }
+
+            .inner-nav {
+                padding-left: 40px;
+                top: 0px;
+                background-color: white;
+                min-height: 30px;
+                width: 100%;
+            }
+
+            .circle {
+                opacity: 50%;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+
+            }
+
+            .red {
+                background-color: red;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+
+            
+
+            
+
+            
+            .inner-nav > a {
+                border: 5px solid gray;
+                background-color: black;
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                background-color: lightgrey;
+                color: white;
+            }
+
+            img {
+                width: 20%;
+                height: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>CSS position</h1>
+        <div class="wrapper">
+            <div class="inner0">
+                <p>Это блок перед блоком навигации.</p>
+            </div>
+            <div class="inner-nav">
+                <a href="task1.html">1</a>
+                <a href="task2.html">2</a>
+                <a href="task3.html">3</a>
+                <a href="task4.html">4</a>
+            </div>
+
+            
+            <div class="circle blue"></div>
+            
+            <div class="inner1">
+                <div class="circle red"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, dolorum nobis? Necessitatibus repellat minus repudiandae assumenda, hic similique tenetur voluptate facilis qui non facere itaque accusamus earum aut, vero molestiae corporis ratione? Minus enim sit numquam saepe voluptas, obcaecati dolores quisquam consectetur, ut quasi esse explicabo mollitia a facilis odit maxime. Nesciunt eaque sit rem! Error animi sunt, tempore amet odio eligendi, eius fugit commodi veniam iste aliquam quidem minus sit obcaecati eos earum, nemo autem possimus doloribus expedita dolores. Porro fugiat nemo facere eum vero incidunt cum ratione, provident perferendis ex nulla fuga, sit officiis omnis est culpa ullam.</p>
+            </div>
+            
+            <div class="inner2">
+                <p>Я важнее этой вашей навигации!</p>
+            </div>
+            <div class="inner3">
+                <p>Первый текст. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laudantium perspiciatis, tempore nemo cupiditate vitae quisquam culpa aspernatur dicta quasi consequuntur repellendus? Itaque magnam dolor rerum error, exercitationem optio mollitia dicta non ea neque cupiditate quia dignissimos voluptatibus eligendi eos inventore voluptate eaque est provident. Magni omnis quisquam porro laboriosam?</p>
+                <p>вот котик кста=)</p>
+                <img src="funny_grumpy_cat.jpg" alt="no cat:(">
+                <p>Второй текст. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem deserunt, enim delectus debitis, cumque a perspiciatis veritatis facere aliquam laudantium officiis odio dolores? Veritatis error sed praesentium laborum in expedita alias repellendus, excepturi necessitatibus dignissimos dicta similique illum eaque atque illo ipsa. Libero vero voluptates nesciunt explicabo quas praesentium qui!</p>
+                <p>Просто очень длинный текст. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora possimus ab delectus eos praesentium accusamus voluptatum adipisci provident consequatur omnis distinctio sunt ducimus, saepe quod, eveniet nostrum placeat numquam cumque. Quod consequatur officiis harum saepe mollitia ipsum voluptates recusandae odio enim corporis explicabo cupiditate aperiam dolor earum corrupti voluptatem eius, obcaecati, suscipit aspernatur amet, dolore alias! Iusto corporis odio exercitationem nisi id molestiae quam alias eligendi incidunt, sint perspiciatis facilis distinctio voluptates facere illum modi aspernatur accusamus eos! Quae, fugiat eum? Fugiat voluptatum eius unde sunt similique dolorem perferendis cumque nesciunt voluptate quo recusandae architecto molestiae blanditiis soluta, quisquam voluptatem animi obcaecati ullam harum reprehenderit atque minus dicta ducimus. Odit quis fuga itaque libero, dolorem minima mollitia neque dolorum magni et expedita nobis tempore quo blanditiis unde necessitatibus architecto! Facilis exercitationem maiores distinctio ea perferendis excepturi quidem consequatur, sequi numquam nesciunt, expedita fugiat possimus eius provident, sed eaque iste amet non libero itaque minima accusantium error reiciendis quas! Ut quo voluptate facere, nobis neque, porro quaerat dolore minus deleniti, minima totam quod illum at. Maxime sit velit nulla dignissimos pariatur provident exercitationem nisi sapiente aperiam, porro nemo saepe quae, earum quasi. Odit nostrum earum esse repellat voluptates officiis nihil dicta hic labore cum laboriosam, illum optio fugit recusandae aperiam saepe at sed delectus veniam. Assumenda soluta molestiae perferendis beatae ipsa ullam minus suscipit pariatur et omnis nisi esse alias optio, blanditiis iusto voluptates provident eius voluptas quam eum? Quo fuga in, ratione atque eos possimus, enim ad saepe molestiae modi doloremque obcaecati delectus nam voluptatibus qui fugiat animi. Enim natus iusto cum laborum quis id, fuga expedita non ipsum voluptate. Minima laboriosam omnis molestias, corporis officia placeat consequatur perspiciatis magni pariatur doloremque autem dicta sed impedit laudantium eius consectetur dolores ad quasi numquam quam quaerat illo natus consequuntur. Laborum nam voluptate reiciendis ducimus facilis dolores quisquam similique nesciunt, dolorum laboriosam, ex ipsam exercitationem quia adipisci delectus ratione itaque aperiam. Unde tempora esse ducimus nesciunt nam omnis eos ipsam corrupti nemo excepturi odio minima qui, repellendus perferendis quisquam, voluptate earum eius eligendi magnam nisi dolor, sequi dicta doloremque? Non reprehenderit id laborum, sed modi aliquid quae ab unde exercitationem blanditiis quasi animi rerum enim dolorum esse aut amet nihil nulla sit. Quas, voluptates magnam. In odio architecto dolore dignissimos quam aliquid eum maxime delectus aut eligendi tempora impedit consectetur ipsam laborum debitis ab ex quos, quisquam et nihil. Animi deleniti delectus, earum minima suscipit, quia deserunt nesciunt similique velit quae numquam autem debitis natus, veniam dolorum iste. Reiciendis dignissimos accusantium labore minima pariatur placeat ex deserunt autem tempore earum excepturi enim dolorem deleniti, aperiam aliquid? Exercitationem tempora corporis quas maiores vero, perspiciatis sunt totam atque, harum laborum consectetur nihil modi repellendus magnam obcaecati. Nemo quaerat eligendi officiis modi error rem tempora? Fugiat eveniet, eius in cumque vitae incidunt optio debitis expedita necessitatibus quos, harum voluptatum molestias officiis fuga ducimus tempore doloribus recusandae atque libero qui laborum suscipit. Sed excepturi, ut consequatur exercitationem veritatis, ea non placeat ipsum quaerat amet commodi id ipsam perferendis quasi esse eius cum possimus blanditiis. Vel, itaque non debitis dolore cumque error commodi possimus maiores ratione similique tempora dolorem nulla dignissimos deleniti laudantium exercitationem ducimus est qui adipisci corporis sed accusantium blanditiis. Sequi ratione, dolorem excepturi quas placeat expedita, repellat temporibus in, accusamus id quaerat minus pariatur error adipisci at aliquam aliquid enim. Vero, earum nesciunt eaque fugit ducimus ab fuga odio delectus, expedita optio atque ea rem aliquid sed incidunt vitae nihil architecto dolore blanditiis ad enim laborum? Aliquam consequuntur possimus sit dicta eaque est reprehenderit nemo, illum similique, in quam dolorem quod maiores pariatur quo dolore officia, necessitatibus vel repudiandae nulla cupiditate ut obcaecati porro soluta! Vitae commodi nulla totam velit iure maiores, sint perspiciatis soluta nostrum, cupiditate numquam tempore quia dolores perferendis vel nihil fugiat consectetur ipsam harum quae. Ipsum mollitia accusamus itaque! Nam, veritatis! Consequatur, quod aspernatur? Suscipit, quo natus tempore dignissimos ducimus, alias totam perspiciatis ipsam facere ea in enim quod placeat optio magnam aut recusandae. Magnam, laudantium? Ratione eaque totam repellendus earum rerum cupiditate at alias aut deserunt qui a et illum cum obcaecati eligendi similique omnis est quae facilis itaque, perspiciatis repellat commodi fugit possimus. Architecto molestias nam beatae blanditiis ipsam corporis tenetur quod consequatur ad, soluta suscipit dolorem nulla, quisquam temporibus provident est nesciunt, iure quia harum reiciendis adipisci similique! Aperiam quae nulla beatae molestias iste expedita consequuntur temporibus dicta exercitationem veniam? At beatae natus cupiditate, mollitia molestiae aliquam. Officia enim velit fugit quidem voluptates corporis laboriosam perspiciatis eos quae eligendi vitae eius vero labore libero aspernatur iste accusamus facilis aperiam, natus, ab ad sunt. Impedit, assumenda iusto est eius error quae, eveniet quasi culpa architecto ipsum a molestiae quas amet natus nihil nulla fugit harum hic nam perspiciatis placeat deleniti! Itaque nobis autem modi necessitatibus placeat at voluptatem ut repellat. Excepturi hic, sed voluptatibus labore molestiae tempora voluptatem exercitationem neque voluptates reiciendis rerum totam iste, quis culpa quae fugiat provident laborum ea porro soluta earum sit. Incidunt consequatur facere aspernatur odio sit, facilis vero consectetur porro nulla dolorum ea corporis debitis omnis obcaecati. Voluptatibus, obcaecati illum temporibus suscipit impedit est beatae commodi dolor quos corporis recusandae, corrupti libero. Ut consequatur minima accusantium libero repellendus, qui magni iste culpa possimus quisquam consectetur beatae reiciendis sit accusamus quaerat blanditiis distinctio voluptatibus, quod numquam quis cupiditate? Esse cupiditate dolore labore, quo animi veniam molestias reprehenderit necessitatibus aut possimus. Odio impedit mollitia fugit nihil perferendis excepturi qui sapiente ducimus, optio, dolores commodi hic itaque provident doloremque minus officiis unde accusantium tempore, et rem? Nemo minus expedita ipsum assumenda sunt ex dolor facere numquam magni ut obcaecati aspernatur incidunt laborum porro, optio pariatur error. Qui, cumque facilis quod iure sunt, quisquam voluptas quidem eveniet distinctio tempore rerum. Facere dolore quo vero, eligendi impedit ratione hic laboriosam harum, culpa cupiditate dicta maiores consequatur nam perferendis laborum sit excepturi aliquid aperiam a. Laborum praesentium dicta tenetur modi, natus, odit voluptas laudantium molestias doloribus totam sequi reprehenderit corporis quis minima eligendi explicabo culpa pariatur omnis quaerat?</p>
+            </div>
+            
+        </div>
+    </body>
+</html>
